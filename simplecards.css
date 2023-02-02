@@ -1,0 +1,85 @@
+/* 
+    Моя первая небольшая библиотека CSS для создания карточек 
+    с двумя линиями статуса, описанием, заголовком и изображением.
+
+    Автор - Подольск (@sepulturese)
+*/
+.card-container {
+    width: 330px; 
+
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(221,221,221,1) 100%);
+    box-shadow: 0 0 5px #00000036;
+    border-radius: 7px;
+    display: inline-block; 
+    margin: 0 15px 15px 15px;
+    color: #262626;
+}
+
+
+.card-container header {
+    height: 200px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+
+section.card-container img {
+    border-bottom: inherit;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+section.card-container h2 {
+    font-size: 17pt;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+
+.card-body {
+    font-size: 15pt;
+    text-align: left;
+    padding: 9px;
+    height: 130px;
+}
+
+
+.card-status {
+    font-size: 100%;
+    display: block;
+    margin: auto auto 5px auto;
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+    width: 95%;
+    padding: 6px;
+    border: solid black 0;
+    border-radius: 10px;
+}
+
+
+/* --------------------------------------------------------- */
+/* |     Заранее заготовленные цвета кнопок-состояний      | */
+/* --------------------------------------------------------- */
+.card-status.green {
+    background-color: #64d983;
+}
+
+.card-status.red {
+    background-color: #d96464;
+}
+
+.card-status.gray {
+    background-color: #938c8c;
+}
+
+.card-status.light-gray {
+    background-color: #babdba;
+}
+/* --------------------------------------------------------- */
