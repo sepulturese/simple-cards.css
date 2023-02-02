@@ -38,3 +38,6 @@
         </footer>
 </section>
 ```
+
+#### Демонстрация.
+![](https://i.imgur.com/1MEbKTN.png)
