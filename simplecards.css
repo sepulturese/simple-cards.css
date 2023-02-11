@@ -1,85 +1,84 @@
-/* 
-    Моя первая небольшая библиотека CSS для создания карточек 
-    с двумя линиями статуса, описанием, заголовком и изображением.
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
-    Автор - Подольск (@sepulturese)
-*/
-.card-container {
-    width: 330px; 
 
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(221,221,221,1) 100%);
-    box-shadow: 0 0 5px #00000036;
-    border-radius: 7px;
-    display: inline-block; 
-    margin: 0 15px 15px 15px;
-    color: #262626;
+/* || MAIN CONTAINER */
+.card {
+    color: #171717;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    border-radius: 10px;
+    width: 300px;
+    min-height: 300px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1),
+                0px 2px 2px rgba(0, 0, 0, 0.1),
+                0px 4px 4px rgba(0, 0, 0, 0.1),
+                0px 8px 8px rgba(0, 0, 0, 0.1),
+                0px 16px 16px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
 }
 
 
-.card-container header {
+/* || CARD HEADER: IMAGE PREVIEW */
+.card-header {
     height: 200px;
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
 }
 
 
-section.card-container img {
-    border-bottom: inherit;
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-    height: 200px;
+.card-header__preview {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
 
-section.card-container h2 {
-    font-size: 17pt;
-    font-weight: bold;
-    display: inline-block;
-    margin-bottom: 8px;
-}
-
-
+/* || CARD BODY: TITLE, SUBTITLE, DESCRIPTION */
 .card-body {
-    font-size: 15pt;
-    text-align: left;
-    padding: 9px;
-    margin-bottom: 10px;
+    padding: 8px;
 }
 
 
-.card-status {
-    font-size: 100%;
+.card-body__title {
+    font-size: 16pt;
+    margin: 0;
+}
+
+
+.card-body__subtitle {
+    font-size: 18pt;
+    color: #959595;
+    margin: 0;
+}
+
+
+.card-body__description {
+    font-size: 12.5pt;
+    margin-top: 8px;
+}
+
+
+/* || CARD FOOTER: LINK'S BUTTONS */
+.card-footer {
+    margin-top: auto;
+    padding: 10px;
+}
+
+.card-footer__link {
+    text-align: center;
+    border-radius: 8px;
     display: block;
-    margin: auto auto 5px auto;
     text-decoration: none;
-    color: whitesmoke;
-    font-weight: bold;
-    width: 95%;
-    padding: 6px;
-    border: solid black 0;
-    border-radius: 10px;
+    padding: 10px;
+    color: rgb(245, 245, 245);
+    font-size: 13pt;
+    background-color: #171717;
+    transition: 0.1s ease;
 }
 
 
-/* --------------------------------------------------------- */
-/* |     Заранее заготовленные цвета кнопок-состояний      | */
-/* --------------------------------------------------------- */
-.card-status.green {
-    background-color: #64d983;
+.card-footer__link:hover {
+    background-color: #202021;
 }
-
-.card-status.red {
-    background-color: #d96464;
-}
-
-.card-status.gray {
-    background-color: #938c8c;
-}
-
-.card-status.light-gray {
-    background-color: #babdba;
-}
-/* --------------------------------------------------------- */
