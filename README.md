@@ -1,5 +1,7 @@
 # simple-cards.css
-Моя первая CSS мини-библиотека, которую сделал для своих будущих проектов. Представляет из себя карточку с изображением, заголовком, небольшим описанием и несколькими кнопками.
+~~Моя первая CSS мини-библиотека, которую сделал для своих будущих проектов. Представляет из себя карточку с изображением, заголовком, небольшим описанием и несколькими кнопками.~~
+
+*\*Спустя неделю я смог модернизировать эту мини-библиотеку, добавив адаптивность при помощи Flexbox, улучшенный минималистичный дизайн и верстку по методологии БЭМ, объемные тени.*
 
 ### Как ее использовать?
 #### Подключение.
@@ -10,34 +12,27 @@
 
 #### Использование.
 ```html
-<!-- Создание контейнера для карточки -->
-<section class="card-container">
-
-    <!-- Верхняя часть карточки, где содержится изображение -->
-    <header>
-        <img src="img/rooms/room.jpg" alt="Room #1">
+<section class="card">
+    <header class="card-header">
+        <img src="https://i.imgur.com/cocH9JH.jpeg" class="card-header__preview">
     </header>
-    
-    <!-- Блок с основным содержимым карточки - ее описанием. -->
     <div class="card-body">
-    
-        <!-- Небольшой подзаголовок, описание. -->
-        <h2>
-            Номер 1, первый этаж
-        </h2>
-        
-        <!-- Описание -->
-        <div>
-            Две спальни, кондиционер, Smart TV, полы с подогревом, витражные окна напротив моря.
+        <h1 class="card-body__title">Some product title.</h1>
+        <h2 class="card-body__subtitle">50.00$</h2>
+        <div class="card-body__description">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            lit non laudantium impedit, necessitatibus odit quae ipsum.
         </div>
-        
-        <!-- В футере содержатся кнопки -->
-        <footer>
-            <a href="#" class="card-status light-gray">8000₽</a>
-            <a href="#" class="card-status green">Свободен</a>
-        </footer>
-</section>
+    </div>
+    <footer class="card-footer">
+        <a href="#" class="card-footer__link">Some link</a>
+    </footer>
+</section>  
 ```
 
 #### Демонстрация.
+##### Нынешняя версия.
+![](https://i.imgur.com/6BCEDCB.png)
+
+##### Прошлая версия.
 ![](https://i.imgur.com/1MEbKTN.png)
